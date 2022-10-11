@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll('.rpsButton')
 const playerScore = document.querySelector('#player-score')
 const hands = document.querySelector('#hands')
 const result = document.querySelector('#result')
+const endGameBtn = document.querySelector('#endGameBtn')
 
 let choice = ['rock', 'paper', 'scissors']
 
@@ -48,4 +49,15 @@ buttons.forEach(button=>{
 	}
 })
 
+
+const clearScore = ()=>{
+	// console.log('clicked')
+	score = 0
+	hands.innerHTML=''
+	result.innerHTML = ''
+	playerScore.innerHTML = ''
+}
+endGameBtn.onclick = clearScore
+
+ 
  
